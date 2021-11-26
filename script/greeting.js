@@ -8,18 +8,30 @@ const greeting = document.querySelector("#greeting");
 
 const HIDDEN = "hidden";
 
+const USERNAME_KEY = "username"
+
 function onSubmit(event){
     const userName = loginInput.value;
     //새로고침 방지
     event.preventDefault();
-    localStorage.setItem("유저이름", userName);
+    localStorage.setItem(USERNAME_KEY, userName);
     loginform.classList.add(HIDDEN);
-    
-    greeting.innerText ="hello! " + userName;
+    paintGreetings();
+}
+
+function paintGreetings()
+{
+    greeting.innerText =`Hello! ${savedUsername}`;
     greeting.classList.remove(HIDDEN);
 }
 
-//window.addEventListener("submit", onSubmit);
+const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-//submit 은 엔터나 클릭 둘다 반응한다.
-loginform.addEventListener("submit", onSubmit);
+if(savedUsername === null){
+    //show the form
+    loginform.classList.remove(HIDDEN);
+    loginform.addEventListener("submit", onSubmit);
+}else{
+    //show the greeting
+    paintGreetings();
+}
