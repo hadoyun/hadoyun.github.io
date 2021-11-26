@@ -8,14 +8,15 @@ const greeting = document.querySelector("#greeting");
 
 const HIDDEN = "hidden";
 
-const USERNAME = loginInput.value;
-
 function onSubmit(event){
+    const userName = loginInput.value;
     //새로고침 방지
     event.preventDefault();
-    // localStorage.setItem("유저이름", input.value);
-    // input.classList.add(HIDDEN);
-    // greeting.classList.remove(HIDDEN);
+    localStorage.setItem("유저이름", userName);
+    loginform.classList.add(HIDDEN);
+    
+    greeting.innerText ="hello! " + userName;
+    greeting.classList.remove(HIDDEN);
 }
 
 //window.addEventListener("submit", onSubmit);
