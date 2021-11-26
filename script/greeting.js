@@ -11,16 +11,17 @@ const HIDDEN = "hidden";
 const USERNAME_KEY = "username"
 
 function onSubmit(event){
-    const userName = loginInput.value;
+    //const userName = loginInput.value;
     //새로고침 방지
     event.preventDefault();
-    localStorage.setItem(USERNAME_KEY, userName);
+    localStorage.setItem(USERNAME_KEY, loginInput.value);
     loginform.classList.add(HIDDEN);
     paintGreetings();
 }
 
 function paintGreetings()
 {
+    const savedUsername = localStorage.getItem(USERNAME_KEY);
     greeting.innerText =`Hello! ${savedUsername}`;
     greeting.classList.remove(HIDDEN);
 }
