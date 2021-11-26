@@ -13,14 +13,7 @@ function loging(event){
     // localStorage.setItem("유저이름", input.value);
     // input.classList.add(HIDDEN);
     // greeting.classList.remove(HIDDEN);
-    
-    //유효성 검사
-    if(USERNAME === ""){
-        alert("이름이 없어용!");
-    }
 }
-
-//""도 검색 가능
 
 inputbts.addEventListener("click", loging);
 // window.addEventListener("submit", loging);
