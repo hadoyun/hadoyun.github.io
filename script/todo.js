@@ -54,9 +54,6 @@ function handleTodoSubmit(event){
     saveTodo();
 }
 
-function sayHello(item){
-    console.log("hello! " , item);
-}
 
 todoForm.addEventListener("submit", handleTodoSubmit);
 
@@ -64,5 +61,5 @@ const savedTodos = localStorage.getItem(TODOS_KEY);
 if(savedTodos !== null){
     const parsedTodos = JSON.parse(savedTodos);
     //console.log(parsedTodos);
-    parsedTodos.forEach(sayHello);
+    parsedTodos.forEach((item) => console.log("this is turn of ", item));
 }
