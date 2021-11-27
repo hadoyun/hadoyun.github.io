@@ -37,7 +37,12 @@ function handleTodoSubmit(event){
     const newTodo = todoInput.value; 
     //input 창 비워주기
     todoInput.value = "";
+
+    toDos.push(newTodo);
+
     paintTodo(newTodo);
+
+    saveTodo();
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
