@@ -2,6 +2,13 @@ const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-form input");
 const todoList = document.querySelector("#todo-list");
 
+//array 만드는 법
+const toDos = [];
+
+function saveTodo(){
+    localStorage.setItem("todos", JSON.stringify(toDos));
+}
+
 function deleteTodo(event){
     //이벤트의 부모 노드를 확인하는 방법★
     //console.log(event.target.parentElement.innerText);
