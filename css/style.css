@@ -1,3 +1,61 @@
 .hidden{
     display: none;
 }
+
+
+img {
+    position: relative;
+}
+
+body{
+    position: absolute;
+    text-align: center;
+    font-size: 30px;
+    height: 100vh;
+    background-repeat : no-repeat;
+    background-size : cover;
+    background-color: slategray;
+}
+
+#todo-form{
+}
+
+#todo-form input{
+    border:none;
+    width: auto;
+    font-size: 22px;
+}
+
+#greeting{
+    color: seashell;
+    font-family: fantasy;
+}
+
+
+#todo-list{
+    color: seashell;
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    list-style:none;
+}
+#todo-input{
+    background-color: snow;
+    width:max-content;
+}
+
+#clock{
+    color: seashell;
+    font-size: 55px;
+}
+
+#quote{
+    color: seashell;
+    font-size: 15px;
+}
+
+#weather{
+    color: seashell;
+    font-size: 14px;
+    text-align: right;
+}
