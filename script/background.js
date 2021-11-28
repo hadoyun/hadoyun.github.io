@@ -1,6 +1,7 @@
 const backgrondImage = [
     "01.jpeg",
     "02.jpeg",
+    "03.jpeg",
 ];
 
 const chosenImage = backgrondImage[Math.floor(Math.random()*backgrondImage.length)];

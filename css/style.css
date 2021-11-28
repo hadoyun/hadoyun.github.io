@@ -2,19 +2,21 @@
     display: none;
 }
 
-.img{
+img{
     margin: 0 auto;
     position: absolute;
-    width: 110%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height:100%;
+
+    background-size:contain;
     z-index: 1;
 }
 
 body{
     font-family: sans-serif;
     margin: 0 auto;
-    color:white;
+    color:rgb(255, 255, 255);
+    background-color: black;
 }
 
 ul{
@@ -28,7 +30,7 @@ ul{
     transform: translate(-50%,-50%);
     z-index: 2;
     text-align: center;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 #todo-list{
@@ -63,12 +65,12 @@ ul{
 
 #clock{
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 2;
     text-align: center;
-    font-size: 70px;
+    font-size: 170px;
 }
 #quote{   
     position: absolute;
